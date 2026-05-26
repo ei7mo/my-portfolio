@@ -1,0 +1,150 @@
+/* Start global styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #0f0f10;
+  font-family: "Roboto Mono", monospace;
+  /* background-image: url("images/background_pattern.png"); */
+  /* background-size: cover; */
+  color: #fff;
+}
+
+.container {
+  margin: 0 20px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.btn {
+  width: fit-content;
+  background-color: #fff;
+  color: #0f0f10;
+  padding: 10px 40px;
+  border-radius: 20px;
+  font-weight: bold;
+  margin-top: 15px;
+  display: inline-block;
+}
+/* End global styles */
+
+/* Start navbar */
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+
+nav #logo {
+  font-size: 1em;
+  cursor: pointer;
+}
+
+#burger-menu {
+  cursor: pointer;
+}
+
+#burger-menu div:not(#menu) {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  margin: 5px;
+}
+
+#menu {
+  background-color: rgba(15, 15, 16, 0.35);
+  backdrop-filter: blur(20px);
+  border-left: 1px solid rgba(255, 255, 255, 0.06);
+  height: 100vh;
+  width: 50vw;
+  padding: 0.5em 1em;
+  position: fixed;
+  top: 0;
+  right: -51vw;
+  text-align: center;
+  transition: 0.3s;
+}
+
+#menu.active {
+  right: 0;
+}
+
+#menu #close-menu {
+  display: block;
+  margin-left: auto;
+  margin-right: 15px;
+  width: fit-content;
+  font-size: 1.5em;
+  margin-bottom: 20px;
+}
+
+#menu ul li:not(:last-child) {
+  margin-bottom: 15px;
+}
+/* End navbar */
+
+/* Start header */
+header {
+  max-width: 100vw;
+  min-height: 100vh;
+  text-align: center;
+}
+
+header #profile-picture {
+  border-radius: 50%;
+  margin: 50px 0;
+}
+
+header h1 {
+  font-size: 2.2em;
+  margin: 15px 0;
+}
+
+header #job-title {
+  display: inline-block;
+  width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid #fff;
+  animation:
+    typing 3s steps(18) 1s both,
+    blinking 0.5s infinite;
+}
+
+header p {
+  margin: 15px 0;
+}
+/* End header */
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 174px;
+  }
+}
+
+@keyframes blinking {
+  from {
+    border-color: #fff;
+  }
+  to {
+    border-color: transparent;
+  }
+}
