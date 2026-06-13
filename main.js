@@ -2,26 +2,13 @@
 const menuBtn = document.getElementById("burger-menu");
 const menu = document.getElementById("menu");
 const closeMenuBtn = document.getElementById("close-menu");
-
-menuBtn.addEventListener("click", () => {
-  menu.classList.add("active");
+menuBtn?.addEventListener("click", () => {
+    menu?.classList.remove("right-[-51vw]");
+    menu?.classList.add("right-0");
 });
-
-closeMenuBtn.addEventListener("click", (e) => {
-  e.stopPropagation();
-  menu.classList.remove("active");
+closeMenuBtn?.addEventListener("click", (e) => {
+    e.stopPropagation();
+    menu?.classList.remove("right-0");
+    menu?.classList.add("right-[-51vw]");
 });
-
-// Animate width of skills section
-const skillsContainer = document.getElementById("skills");
-window.onscroll = () => {
-  if (window.scrollY >= skillsContainer.offsetTop - 500) {
-    const skills = document.querySelectorAll(
-      "#skills .box .skill-progress span",
-    );
-
-    skills.forEach((skill) => {
-      skill.style.width = skill.dataset.width;
-    });
-  }
-};
+export {};
