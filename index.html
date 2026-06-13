@@ -1,84 +1,130 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mohammad Portfolio</title>
     <link rel="stylesheet" href="css/all.min.css" />
-    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/output.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100..700&display=swap"
       rel="stylesheet"
     />
   </head>
-  <body>
-    <div class="container">
+  <body
+    class="bg-[#0f0f10] text-white font-['Roboto_Mono',monospace] before:content-[''] before:fixed before:inset-0 before:bg-[linear-gradient(rgba(16,185,129,0.025)_1px,transparent_1px),linear-gradient(90deg,rgba(16,185,129,0.025)_1px,transparent_1px)] before:bg-size-[40px_40px] before:pointer-events-none before:z-0"
+  >
+    <div class="mx-5 md:mx-20 relative z-10">
       <!-- Start header -->
-      <header>
+      <header class="min-h-screen text-center w-full">
         <!-- Start navbar -->
-        <nav>
-          <span id="logo">Mohammad</span>
-          <div id="burger-menu">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div id="menu">
-              <span id="close-menu">X</span>
-              <ul>
-                <li><a href="#about-me">About</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
+        <nav class="flex justify-between items-center py-2.5">
+          <span class="text-base cursor-pointer" id="logo">Mohammad</span>
+
+          <!-- Burger menu (mobile) -->
+          <div class="cursor-pointer md:hidden" id="burger-menu">
+            <div class="w-6.25 h-0.75 bg-white my-1.25"></div>
+            <div class="w-6.25 h-0.75 bg-white my-1.25"></div>
+            <div class="w-6.25 h-0.75 bg-white my-1.25"></div>
+
+            <!-- Mobile menu panel -->
+            <div
+              id="menu"
+              class="bg-[#0f0f10]/35 backdrop-blur-[20px] border-l border-black/60 h-screen w-[50vw] pt-2 pb-2 pl-4 pr-4 fixed top-0 right-[-51vw] text-center transition-all duration-300 z-50"
+            >
+              <span
+                class="block ml-auto mr-3.75 w-fit text-2xl mb-5"
+                id="close-menu"
+                >X</span
+              >
+              <ul class="list-none">
+                <li class="mb-3.75"><a href="#about-me">About</a></li>
+                <li class="mb-3.75"><a href="#experience">Experience</a></li>
+                <li class="mb-3.75"><a href="#skills">Skills</a></li>
+                <li class="mb-3.75"><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
               </ul>
             </div>
           </div>
-          <ul class="p-hidden">
-            <li><a href="#about-me">About</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
+
+          <!-- Desktop nav -->
+          <ul class="hidden md:flex gap-2.5 list-none">
+            <li>
+              <a class="hover:text-[#00cfd1] transition-colors" href="#about-me"
+                >About</a
+              >
+            </li>
+            <li>
+              <a
+                class="hover:text-[#00cfd1] transition-colors"
+                href="#experience"
+                >Experience</a
+              >
+            </li>
+            <li>
+              <a class="hover:text-[#00cfd1] transition-colors" href="#skills"
+                >Skills</a
+              >
+            </li>
+            <li>
+              <a class="hover:text-[#00cfd1] transition-colors" href="#projects"
+                >Projects</a
+              >
+            </li>
+            <li>
+              <a class="hover:text-[#00cfd1] transition-colors" href="#contact"
+                >Contact</a
+              >
+            </li>
           </ul>
         </nav>
         <!-- End navbar -->
 
-        <div class="img-container">
+        <div class="w-50 mt-12.5 mb-12.5 mx-auto md:w-100">
           <img
+            class="rounded-full w-full h-auto"
             src="images/profile_picture.jpg"
             alt="Profile Picture"
             id="profile-picture"
           />
         </div>
+
         <span>Hello I'm</span>
-        <h1>Mohammad Hani</h1>
-        <span id="job-title">Frontend Developer</span>
-        <p>
+        <h1 class="text-[2.2em] mt-3.75 mb-3.75">Mohammad Hani</h1>
+        <span
+          id="job-title"
+          class="inline-block w-0 whitespace-nowrap overflow-hidden border-r-2 border-white animate-[typing_3s_steps(18)_1s_both,blinking_0.5s_infinite]"
+          >Frontend Developer</span
+        >
+        <p class="text-[#6d6d6d] my-3.75">
           & aspiring full stack developer. I build optimized, responsive and
           user-friendly web sites.
         </p>
-        <a href="files/Mohammad_CV.pdf" class="btn">
+        <a
+          href="Mohammad_CV.pdf"
+          class="w-fit bg-white text-[#0f0f10] px-5 py-2.5 rounded-[20px] font-bold inline-block transition-all hover:shadow-[0_0_20px_1px_rgba(255,255,255,0.35)] no-underline"
+        >
           <i class="fa-solid fa-arrow-down"></i> Download CV
         </a>
       </header>
       <!-- End header -->
 
       <!-- Start about me -->
-      <section id="about-me">
-        <h2>About Me</h2>
-        <p>
+      <section id="about-me" class="flex flex-col gap-5 pt-12.5">
+        <h2 class="text-center mb-5 text-2xl font-bold">About Me</h2>
+        <p class="text-[#6d6d6d] leading-relaxed">
           I'm a 21-year-old frontend developer and IT student at Aqaba
           University of Technology (GPA 3.32), based in Aqaba, Jordan. I build
           clean, responsive websites using HTML, CSS, and JavaScript — and I'm
           currently expanding into full stack development.
         </p>
-        <p>
+        <p class="text-[#6d6d6d] leading-relaxed">
           I got into web development out of genuine curiosity — I wanted to
           understand how things on the web actually work, not just use them.
           That same curiosity is pushing me toward AI and cybersecurity as
           longer-term directions.
         </p>
-        <p>
+        <p class="text-[#6d6d6d] leading-relaxed">
           I keep my skills honest — if it's listed anywhere on my profile, I can
           defend it in an interview. I care about writing clean code, building
           things that actually work, and levelling up consistently.
@@ -87,14 +133,25 @@
       <!-- End about me -->
 
       <!-- Start experience -->
-      <section id="experience">
-        <h2>Experience</h2>
-        <div id="timeline">
-          <div class="box">
-            <span class="date">2025 - Present</span>
-            <h3>Mines Gaming Center</h3>
-            <span class="job-title">IT Support Specialist</span>
-            <p>
+      <section id="experience" class="pt-12.5 flex flex-col gap-5">
+        <h2 class="text-center mb-5 text-2xl font-bold">Experience</h2>
+        <div id="timeline" class="max-h-screen relative">
+          <!-- Timeline vertical line (desktop) -->
+          <div
+            class="hidden lg:block absolute left-1/2 -translate-x-1/2 -top-2.5 w-0.5 h-[calc(100%+20px)] bg-white"
+          ></div>
+
+          <div
+            class="w-full lg:w-[45%] border-2 border-[#6d6d6d] relative bg-[#1a1a1a] p-5 rounded-[20px] hover:animate-[shadow-drop_0.4s_cubic-bezier(0.25,0.46,0.45,0.94)_both]"
+          >
+            <span class="text-[#00cfd1] mb-2.5 inline-block"
+              >2025 - Present</span
+            >
+            <h3 class="font-bold text-lg">Mines Gaming Center</h3>
+            <span class="job-title text-[#6d6d6d] mb-5 inline-block"
+              >IT Support Specialist</span
+            >
+            <p class="text-[#6d6d6d] leading-relaxed text-sm">
               Maintained and troubleshot 30+ gaming stations, handling hardware
               issues, OS errors, and peripheral setup. Configured and managed
               the local network including switches and access points. Wrote a
@@ -102,9 +159,15 @@
               temp files, browser history, and saved credentials across all
               stations, cutting manual reset time significantly.
             </p>
-            <div class="tags">
-              <span class="tag">Batch Script</span>
-              <span class="tag">Technical Skills</span>
+            <div class="tags flex flex-wrap gap-2 mt-5">
+              <span
+                class="bg-[#1a1a1a] border border-[#6d6d6d] rounded-[20px] px-3.75 py-1.25 text-[0.7em]"
+                >Batch Script</span
+              >
+              <span
+                class="bg-[#1a1a1a] border border-[#6d6d6d] rounded-[20px] px-3.75 py-1.25 text-[0.7em]"
+                >Technical Skills</span
+              >
             </div>
           </div>
         </div>
@@ -112,98 +175,151 @@
       <!-- End experience -->
 
       <!-- Start skills -->
-      <section id="skills">
-        <h2>Skills</h2>
-        <div class="box-container">
-          <div class="box shadow-drop">
-            <h3>Frontend</h3>
-            <ul>
+      <section id="skills" class="mt-12.5">
+        <h2 class="text-center mb-5 text-2xl font-bold">Skills</h2>
+        <div class="box-container flex flex-col lg:flex-row gap-5">
+          <div
+            class="box border-2 border-[#6d6d6d] relative bg-[#1a1a1a] p-5 rounded-[20px] w-full hover:animate-[shadow-drop_0.4s_cubic-bezier(0.25,0.46,0.45,0.94)_both]"
+          >
+            <h3 class="font-bold text-lg mb-3.75">Frontend</h3>
+            <ul class="list-none flex flex-wrap gap-3.75">
               <li>
-                HTML
-                <div class="skill-progress" data-width="95%">
-                  <span data-width="95%"></span>
-                </div>
+                <i
+                  class="fa-brands fa-html5 text-4xl border py-1 px-1 rounded-md"
+                ></i>
               </li>
               <li>
-                CSS
-                <div class="skill-progress" data-width="85%">
-                  <span data-width="85%"></span>
-                </div>
+                <i
+                  class="fa-brands fa-css3-alt text-4xl border py-1 px-1 rounded-md"
+                ></i>
               </li>
               <li>
-                JavaScript
-                <div class="skill-progress" data-width="75%">
-                  <span data-width="75%"></span>
-                </div>
+                <i
+                  class="fa-brands fa-tailwind-css text-4xl border py-1 -px-1 rounded-md"
+                ></i>
+              </li>
+              <li>
+                <i
+                  class="fa-brands fa-js text-4xl border py-1 px-1 rounded-md"
+                ></i>
+              </li>
+              <li>
+                <i
+                  class="fa-brands fa-typescript text-4xl border py-1 px-1 rounded-md"
+                ></i>
               </li>
             </ul>
           </div>
-          <div class="box shadow-drop">
-            <h3>Backend</h3>
-            <p>Not unlocked yet <i class="fa-solid fa-lock"></i></p>
+
+          <div
+            class="box border-2 border-[#6d6d6d] relative bg-[#1a1a1a] p-5 rounded-[20px] w-full hover:animate-[shadow-drop_0.4s_cubic-bezier(0.25,0.46,0.45,0.94)_both]"
+          >
+            <h3 class="font-bold text-lg mb-3.75">Backend</h3>
+            <p class="text-[#6d6d6d]">
+              Not unlocked yet <i class="fa-solid fa-lock"></i>
+            </p>
           </div>
         </div>
       </section>
       <!-- End skills -->
 
       <!-- Start projects -->
-      <section id="projects">
-        <h2>Projects</h2>
-        <div class="box-container">
-          <div class="box shadow-drop">
-            <img src="images/project1.png" alt="Project picture" />
-            <div class="info">
-              <h3>Currency Converter</h3>
-              <p>This is a practice for Javascript and first time using API</p>
-              <div class="links">
+      <section id="projects" class="pt-12.5">
+        <h2 class="text-center mb-5 text-2xl font-bold">Projects</h2>
+        <div class="box-container flex flex-col lg:flex-row gap-5">
+          <div
+            class="border-2 border-[#6d6d6d] relative bg-[#1a1a1a] rounded-[20px] w-full overflow-hidden hover:animate-[shadow-drop_0.4s_cubic-bezier(0.25,0.46,0.45,0.94)_both]"
+          >
+            <img
+              src="images/project1.png"
+              alt="Project picture"
+              class="w-full h-auto"
+            />
+            <div class="info p-2.5 flex flex-col items-center">
+              <h3 class="font-bold text-lg">Currency Converter</h3>
+              <p class="text-[#6d6d6d] my-1.25 mb-5 text-center text-sm">
+                This is a practice for Javascript and first time using API
+              </p>
+              <div class="links flex gap-2.5 mb-5">
                 <a
                   href="https://ei7mo.github.io/currency-converter/"
-                  class="btn"
+                  class="w-fit bg-white text-[#0f0f10] px-5 py-2.5 rounded-[20px] font-bold inline-block transition-all hover:shadow-[0_0_20px_1px_rgba(255,255,255,0.35)] no-underline text-sm"
                   target="_blank"
                   >Live Demo</a
                 >
                 <a
                   href="https://github.com/ei7mo/currency-converter"
-                  class="btn"
+                  class="w-fit bg-white text-[#0f0f10] px-5 py-2.5 rounded-[20px] font-bold inline-block transition-all hover:shadow-[0_0_20px_1px_rgba(255,255,255,0.35)] no-underline text-sm"
                   target="_blank"
                   >Github Repo</a
                 >
               </div>
-              <div class="tags">
-                <span class="tag">HTML</span>
-                <span class="tag">CSS</span>
-                <span class="tag">JS</span>
-                <span class="tag">API</span>
+              <div class="tags flex flex-wrap gap-2 mb-2.5">
+                <span
+                  class="bg-[#1a1a1a] border border-[#6d6d6d] rounded-[20px] px-3.75 py-1.25 text-[0.7em]"
+                  >HTML</span
+                >
+                <span
+                  class="bg-[#1a1a1a] border border-[#6d6d6d] rounded-[20px] px-3.75 py-1.25 text-[0.7em]"
+                  >Tailwind</span
+                >
+                <span
+                  class="bg-[#1a1a1a] border border-[#6d6d6d] rounded-[20px] px-3.75 py-1.25 text-[0.7em]"
+                  >Typescript</span
+                >
+                <span
+                  class="bg-[#1a1a1a] border border-[#6d6d6d] rounded-[20px] px-3.75 py-1.25 text-[0.7em]"
+                  >API</span
+                >
               </div>
             </div>
           </div>
-          <div class="box shadow-drop">
-            <img src="images/project2.png" alt="Project picture" />
-            <div class="info">
-              <h3>Quiz App</h3>
-              <p>
+
+          <div
+            class="border-2 border-[#6d6d6d] relative bg-[#1a1a1a] rounded-[20px] w-full overflow-hidden hover:animate-[shadow-drop_0.4s_cubic-bezier(0.25,0.46,0.45,0.94)_both]"
+          >
+            <img
+              src="images/project2.png"
+              alt="Project picture"
+              class="w-full h-auto"
+            />
+            <div class="info p-2.5 flex flex-col items-center">
+              <h3 class="font-bold text-lg">Quiz App</h3>
+              <p class="text-[#6d6d6d] my-1.25 mb-5 text-center text-sm">
                 This is a practice for Javascript and first time fetching info
                 from json file
               </p>
-              <div class="links">
+              <div class="links flex gap-2.5 mb-5">
                 <a
-                  href="https://ei7mo.github.io/quiz-app/"
-                  class="btn"
+                  href="https://quizz-app-ei7.netlify.app/"
+                  class="w-fit bg-white text-[#0f0f10] px-5 py-2.5 rounded-[20px] font-bold inline-block transition-all hover:shadow-[0_0_20px_1px_rgba(255,255,255,0.35)] no-underline text-sm"
                   target="_blank"
                   >Live Demo</a
                 >
                 <a
                   href="https://github.com/ei7mo/quiz-app"
-                  class="btn"
+                  class="w-fit bg-white text-[#0f0f10] px-5 py-2.5 rounded-[20px] font-bold inline-block transition-all hover:shadow-[0_0_20px_1px_rgba(255,255,255,0.35)] no-underline text-sm"
                   target="_blank"
                   >Github Repo</a
                 >
               </div>
-              <div class="tags">
-                <span class="tag">HTML</span>
-                <span class="tag">CSS</span>
-                <span class="tag">JS</span>
-                <span class="tag">JSON</span>
+              <div class="tags flex flex-wrap gap-2 mb-2.5">
+                <span
+                  class="bg-[#1a1a1a] border border-[#6d6d6d] rounded-[20px] px-3.75 py-1.25 text-[0.7em]"
+                  >HTML</span
+                >
+                <span
+                  class="bg-[#1a1a1a] border border-[#6d6d6d] rounded-[20px] px-3.75 py-1.25 text-[0.7em]"
+                  >Tailwind</span
+                >
+                <span
+                  class="bg-[#1a1a1a] border border-[#6d6d6d] rounded-[20px] px-3.75 py-1.25 text-[0.7em]"
+                  >Typescript</span
+                >
+                <span
+                  class="bg-[#1a1a1a] border border-[#6d6d6d] rounded-[20px] px-3.75 py-1.25 text-[0.7em]"
+                  >JSON</span
+                >
               </div>
             </div>
           </div>
@@ -212,69 +328,58 @@
       <!-- End projects -->
 
       <!-- Start contact -->
-      <section id="contact">
-        <h2>Contact Me</h2>
-        <div class="box-container">
-          <div class="box">
-            <h3>Contact Information</h3>
-            <p>
+      <section id="contact" class="pt-12.5 pb-5">
+        <h2 class="text-center mb-5 text-2xl font-bold">Contact Me</h2>
+        <div class="box-container flex flex-col gap-5 mb-5">
+          <div
+            class="border-2 border-[#6d6d6d] relative bg-[#1a1a1a] p-5 rounded-[20px]"
+          >
+            <h3 class="font-bold text-lg">Contact Information</h3>
+            <p class="text-[#6d6d6d] my-3.75 text-sm">
               I'm always open to work, discussing frontend development work, or
               partnerships.
             </p>
-            <div class="contact-info">
-              <div>
-                <i class="fa-solid fa-envelope"></i
-                ><span>mohammadhani.ei7@gmail.com</span>
+            <div class="contact-info flex flex-col gap-2">
+              <div class="flex items-center gap-4 text-sm">
+                <i class="fa-solid fa-envelope pr-7.5"></i>
+                <span class="mb-2.5 inline-block"
+                  >mohammadhani.ei7@gmail.com</span
+                >
               </div>
-              <div>
-                <i class="fa-solid fa-phone"></i><span>+962789131034</span>
+              <div class="flex items-center gap-4 text-sm">
+                <i class="fa-solid fa-phone pr-7.5"></i>
+                <span class="mb-2.5 inline-block">+962789131034</span>
               </div>
             </div>
-            <div class="social-profiles">
-              <h3>Social Profiles</h3>
-              <a href="https://github.com/ei7mo"
-                ><i class="fa-brands fa-github fa-2x"></i
-              ></a>
-              <a href="https://www.linkedin.com/in/mhnai/"
-                ><i class="fa-brands fa-linkedin fa-2x"></i
-              ></a>
-              <a href="https://www.instagram.com/mohammad_hani76"
-                ><i class="fa-brands fa-square-instagram fa-2x"></i
-              ></a>
+            <div class="social-profiles mt-5">
+              <h3 class="font-bold mb-3.75">Social Profiles</h3>
+              <div class="flex gap-4">
+                <a
+                  href="https://github.com/ei7mo"
+                  class="text-white hover:text-[#00cfd1] transition-colors"
+                >
+                  <i class="fa-brands fa-github fa-2x"></i>
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/mhnai/"
+                  class="text-white hover:text-[#00cfd1] transition-colors"
+                >
+                  <i class="fa-brands fa-linkedin fa-2x"></i>
+                </a>
+                <a
+                  href="https://www.instagram.com/mohammad_hani76"
+                  class="text-white hover:text-[#00cfd1] transition-colors"
+                >
+                  <i class="fa-brands fa-square-instagram fa-2x"></i>
+                </a>
+              </div>
             </div>
           </div>
-          <!-- Need api so will be back later -->
-          <!-- <div class="box">
-            <form action="">
-              <label for="name">Name</label>
-              <input
-                id="name"
-                type="text"
-                placeholder="Whats your name?"
-                required
-              />
-              <label for="email">Email</label>
-              <input
-                id="email"
-                type="email"
-                placeholder="Whats your email?"
-                required
-              />
-              <label for="number">Number</label>
-              <input
-                id="number"
-                type="number"
-                placeholder="Whats your phone number?"
-              />
-              <textarea placeholder="Write your message" required></textarea>
-              <button class="btn">Send</button>
-            </form>
-          </div> -->
         </div>
       </section>
       <!-- End contact -->
     </div>
 
-    <script src="main.js"></script>
+    <script type="module" src="main.js"></script>
   </body>
 </html>
